@@ -17,10 +17,10 @@ $ ./crysocket
 To test, open a browser tab and enter the following into the developer javascript console:
 
 ```javascript
-ws = new WebSocket("ws://localhost:3000")
+ws = new WebSocket("wss://crysocket.herokuapp.com/socket")
 ws.onmessage = msg => console.log(msg.data)
 ```
 
 The timestamp should update approximately every second.
 
-Alternatively, access the GET endpoint at http://localhost:3000/time
+Alternatively, access the GET endpoint at https://crysocket.herokuapp.com/time
