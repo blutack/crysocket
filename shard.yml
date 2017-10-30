@@ -1,0 +1,19 @@
+name: crysocket
+version: 0.1.0
+
+authors:
+  - Gareth R <blutack@gmail.com>
+
+targets:
+  crysocket:
+    main: src/crysocket.cr
+
+dependencies:
+  spec-kemal:
+    github: kemalcr/spec-kemal
+  kemal:
+    github: kemalcr/kemal
+
+crystal: 0.23.1
+
+license: MIT
