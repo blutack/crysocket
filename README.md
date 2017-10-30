@@ -1,5 +1,5 @@
 # crysocket 
-![Travis build status](https://api.travis-ci.org/blutack/crysocket.svg?branch=master)
+![Travis build status](https://api.travis-ci.org/blutack/crysocket.svg?branch=master) ![Heroku status](https://heroku-badge.herokuapp.com/?app=crysocket)
 
 A basic Kemal toy application which serves a timestamp over websockets and a JSON endpoint.
 
