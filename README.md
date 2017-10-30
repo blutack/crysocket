@@ -1,27 +1,22 @@
 # crysocket
 
-TODO: Write a description here
-
-## Installation
-
-TODO: Write installation instructions here
+A basic Kemal toy application which serves a timestamp over websockets and a JSON endpoint.
 
 ## Usage
 
-TODO: Write usage instructions here
+Install [Crystal](https://crystal-lang.org/)
+```bash
+$ shards install
+$ crystal build --release src/crysocket.cr
+$ ./crysocket
+```
 
-## Development
+Open a browser tab and enter the following into the developer javascript console.
 
-TODO: Write development instructions here
+```javascript
+ws = new WebSocket("ws://localhost:3000")
+ws.onmessage = msg => console.log(msg.data)
+```
 
-## Contributing
-
-1. Fork it ( https://github.com/[your-github-name]/crysocket/fork )
-2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Add some feature')
-4. Push to the branch (git push origin my-new-feature)
-5. Create a new Pull Request
-
-## Contributors
-
-- [[your-github-name]](https://github.com/[your-github-name]) Gareth R - creator, maintainer
+The timestamp should update approximately every second.
+Alternatively, access the GET endpoint at http://localhost:3000/time
