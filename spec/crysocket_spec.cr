@@ -1,6 +1,12 @@
 require "./spec_helper"
 
 describe Crysocket do
+  it "redirects root to time" do
+    get "/"
+    response.status_code.should eq 302
+    puts response.headers["Location"].should eq "/time"
+  end
+
   it "renders time" do
     get "/time"
     response.status_code.should eq 200

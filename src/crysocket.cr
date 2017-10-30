@@ -13,6 +13,10 @@ end
 
 sockets = [] of HTTP::WebSocket
 
+get "/" do |env|
+  env.redirect "/time"
+end
+
 get "/time" do |env|
   env.response.content_type = "application/json"
   Timestamp.new.to_json
